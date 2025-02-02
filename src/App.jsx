@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import ContactForm from './components/ContactForm';
 import ProjectCard from './components/ProjectCard';
-
+import "./App.css";
 
 function App() {
   return (

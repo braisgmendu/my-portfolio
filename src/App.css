@@ -45,3 +45,70 @@ h1,h2,h3,h4,h5,h6,p {
   --ms-transition: background-color 0.5s;
   --o-transition: background-color 0.5s;
 }
+
+.btn-outline-primary{
+  color: var(--primary);
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline-primary:hover{
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.btn-primary {
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-primary:hover{
+  color: var(--primary);
+  background-color: var(--white);
+}
+
+.btn-github {
+  color : var(--white);
+  background-color: var(--github);
+  border: var(--github);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 2px 0 rgba(16,24,40,0.95);
+  gap: 16px;
+}
+
+.btn-github:hover{
+  color: var(--github);
+  background-color: var(--white);
+}
+
+/*Global CSS Ends*/
+
+/* Main Headings*/
+
+/* Heading 1 */
+h1{
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 67px;
+}
+h2{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 58px;
+}
+h3{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+/*Paragraphs text large medium small */
+/*Body 1*/
+.text-lg{
+  color: var(--darkblue);
+  
+}
