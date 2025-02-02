@@ -1,9 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import ContactForm from './components/ContactForm';
+import ProjectCard from './components/ProjectCard';
+
+
 function App() {
   return (
     <Router>
@@ -12,10 +17,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={
-              <div>
-                <h2>Bienvenido</h2>
-                <p>Este es mi portafolio.</p>
-              </div>
+              <Home />
             } />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />

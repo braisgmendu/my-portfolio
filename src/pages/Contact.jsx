@@ -3,6 +3,7 @@ export default function Contact() {
       <section>
         <h2>Contacto</h2>
         <p>Puedes contactarme en braisgmendu@gmail.com.</p>
+        
       </section>
     );
   }
