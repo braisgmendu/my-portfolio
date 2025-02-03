@@ -1,36 +1,115 @@
-import { NavLink } from 'react-router-dom'; // Importa NavLink
-function Header() {
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+function Header(){
+  const [navActive, setNavActive] = useState(false);
+
+  const toggleNav = () => {
+    setNavActive(!navActive)
+  }
+
+  const closeMenu = () => {
+    setNavActive(false)
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth <= 500){
+         closeMenu
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize",handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if(window.innerWidth <= 1200){
+      closeMenu;
+    }
+  }, []);
+
   return (
-    <header className="bg-dark text-white">
-      <nav className="navbar navbar-expand-lg navbar-dark container">
-        <NavLink className="navbar-brand" to="/">Mi Portafolio</NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about">Sobre mí</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/projects">Proyectos</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">Contacto</NavLink>
-            </li>
-          </ul>
+    <nav className={`navbar ${navActive ?
+      "active" : ""}`}>
+        <div>
+          <img src="./img/logo.svg" alt="Logoipsum" />
         </div>
-      </nav>
-    </header>
-  );
+        <a className={`nav_a ${navActive ? 
+          "active" : ""}`} 
+          onClick={toggleNav}>
+            <span className="nav_a_line"></span>
+            <span className="nav_a_line"></span>
+            <span className="nav_a_line"></span>
+        </a>
+        <div className={`navbar-items ${navActive ? 
+          "active" : ""}`}>
+            <ul>
+              <li>
+                <Link
+                  onClick={closeMenu}
+                  activeClass="navbar-active-content"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="heroSection"
+                  className="navbar-content"
+                  >
+                    Home
+                  </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={closeMenu}
+                  activeClass="navbar-active-content"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="MyProject"
+                  className="navbar-content"
+                  >
+                    Projects
+                  </Link>
+              </li>
+              <li>
+                <Link
+                  onClick={closeMenu}
+                  activeClass="navbar-active-content"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  to="AboutMe"
+                  className="navbar-content"
+                  >
+                    About Me
+                  </Link>
+              </li>
+              
+            </ul>
+          </div>
+          <Link
+            onClick={closeMenu}
+            activeClass="navbar-active-content"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            to="ContactMe"
+            className="btn btn-outline-primary"
+            >
+              Contact Me 
+          </Link>
+    </nav>
+  )
 }
 
-export default Header;  
+
+
+
+export default Header;
