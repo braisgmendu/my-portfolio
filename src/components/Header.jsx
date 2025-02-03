@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'; // Importa NavLink
-
 function Header() {
   return (
     <header className="bg-dark text-white">
