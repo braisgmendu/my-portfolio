@@ -35,9 +35,6 @@ function Header(){
   return (
     <nav className={`navbar ${navActive ?
       "active" : ""}`}>
-        <div>
-          <img src="./img/logo.svg" alt="Logoipsum" />
-        </div>
         <a className={`nav_a ${navActive ? 
           "active" : ""}`} 
           onClick={toggleNav}>

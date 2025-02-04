@@ -1,0 +1,23 @@
+{
+    "skills":[
+        {
+            "id":1,
+            "src": "./img/Frontend.png",
+            "title":"Frontend",
+            "description": "Self-taught learning creating personal web pages. I also took a User Interfaces course during my degree."
+        },
+        {
+            "id":2,
+            "src": "./img/Backend.png",
+            "title": "Back-End",
+            "description": "I took a Back-End meta developer course and did some personal project"
+        },
+        {
+            "id": 3,
+            "src": "./img/Frameworks.png",
+            "title": "Frameworks",
+            "description": "The main frameworks I have used are React and Django"
+        }
+        
+    ]
+}
