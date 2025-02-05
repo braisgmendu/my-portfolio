@@ -19,5 +19,24 @@
             "description": "The main frameworks I have used are React and Django"
         }
         
+    ],
+    "portfolio":[
+        {
+            "id":1,
+            "src": "./img/placeholder-img.png",
+            "title":"Django Project",
+            "description": "Self-taught learning creating personal web pages. I also took a User Interfaces course during my degree.",
+            "link":"View In GitHub"
+        },
+        {
+            "id":2,
+            "src": "./img/Backend.png",
+            "title": "Back-End",
+            "description": "I took a Back-End meta developer course and did some personal project",
+            "link":"View In GitHub"
+        }
+      
+        
     ]
+
 }
